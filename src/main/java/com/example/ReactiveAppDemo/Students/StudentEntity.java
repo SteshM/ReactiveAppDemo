@@ -1,16 +1,21 @@
 package com.example.ReactiveAppDemo.Students;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "students")
+@Entity
+@Table( name = "students")
+//@Table(name = "students")
 public class StudentEntity {
+//    @Id
+//
     @Id
     private int id;
     private String firstName;
