@@ -1,6 +1,7 @@
 package com.example.ReactiveAppDemo.Students;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Setter
@@ -10,6 +11,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Builder
 @Table(name = "Students")
 public class StudentEntity {
+    @Id
     private long id;
     private String firstName;
     private String lastName;
