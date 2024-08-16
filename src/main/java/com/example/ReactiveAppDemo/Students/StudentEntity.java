@@ -9,11 +9,11 @@ import org.springframework.data.relational.core.mapping.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "Students")
+@Table(name = "students")
 public class StudentEntity {
     @Id
-    private long id;
+    private int id;
     private String firstName;
     private String lastName;
-    private long age;
+    private int age;
 }
