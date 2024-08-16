@@ -17,7 +17,7 @@ public class StudentEntity {
 //    @Id
 //
     @Id
-    private int id;
+    private int studentId;
     private String firstName;
     private String lastName;
     private int age;
