@@ -20,9 +20,15 @@ public class StudentService {
         return null;
 
     }
-    public Mono<StudentEntity> findById(int id){
-        return repo.findByStudentId(id);
-    }
+//    public Mono<StudentEntity>findById(int id){
+//        return repo.findByStudentId(id);
+//
+//    }
+
+
+//    public StudentEntity findById(int id){
+//        return repo.findByStudentId(id);
+//    }
 
 
 }

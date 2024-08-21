@@ -1,10 +1,8 @@
 package com.example.ReactiveAppDemo.Students;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -17,6 +15,10 @@ public class StudentController {
     @PostMapping()
     Mono<StudentEntity> saveStudent(@RequestBody StudentEntity student){
         return studentService.save(student);
+    }
+    @GetMapping()
+    Flux<StudentEntity>allStudents(){
+        return studentService.findAll();
     }
 
 }

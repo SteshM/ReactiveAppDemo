@@ -1,8 +1,8 @@
 package com.example.ReactiveAppDemo.Students;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Setter
@@ -16,7 +16,10 @@ import lombok.*;
 public class StudentEntity {
 //    @Id
 //
+
     @Id
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int studentId;
     private String firstName;
     private String lastName;
